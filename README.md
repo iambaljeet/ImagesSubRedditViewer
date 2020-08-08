@@ -1,6 +1,6 @@
 # ImagesSubRedditViewer
 
-**ImagesSubRedditViewer** is a demo application for showcasing a basic imageloader library for loading network images ti imageview and caching them in both Memory and Disk.
+**ImagesSubRedditViewer** is a demo application for showcasing a basic imageloader library for loading network images into imageview and caching them in both Memory and Disk.
 
 
 # Features
