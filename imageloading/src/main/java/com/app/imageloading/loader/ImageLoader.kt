@@ -24,15 +24,15 @@ class ImageLoader(context: Context) {
      * Method for handling requests for loading images
      * Checks cache for bitmap otherwise starts Downloading abd caching task
      */
-    fun loadImage(fileUrl: String, imageView: ImageView, placeholder: Drawable?) {
+    fun loadImage(fileUrl: String, imageView: ImageView, placeHolder: Drawable?) {
         val bitmap = cacheManager.get(url = fileUrl)
         bitmap?.let {
             imageView.setImageBitmap(it)
             return
         } ?: run {
             imageView.tag = fileUrl
-            if (placeholder != null) imageView.setImageDrawable(placeholder)
-            addDownloadImageTask(fileUrl, DownloadImageTask(fileUrl, imageView, placeholder, cacheManager))
+            if (placeHolder != null) imageView.setImageDrawable(placeHolder)
+            addDownloadImageTask(fileUrl, DownloadImageTask(fileUrl, imageView, placeHolder, cacheManager))
         }
     }
 
