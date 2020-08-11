@@ -24,7 +24,7 @@ class FullScreenImageActivity : AppCompatActivity(), View.OnClickListener {
         if (imageUrl.isNullOrBlank()) throw Exception("ImageUrl should not be null")
 
         image_view_back?.setOnClickListener(this)
-        image_view_main?.loadImage(imageUrl = imageUrl, placeholder = R.drawable.image_placeholder)
+        image_view_main?.loadImage(imageUrl = imageUrl, placeHolder = R.drawable.image_placeholder)
     }
 
     override fun onClick(view: View?) {
