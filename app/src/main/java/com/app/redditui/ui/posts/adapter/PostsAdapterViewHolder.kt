@@ -17,7 +17,7 @@ class PostsAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
         val imageUrl = redditPostsModel?.data?.url_overridden_by_dest
 
         if (!imageUrl.isNullOrBlank()) {
-            imageViewRedditPost?.loadImage(imageUrl = imageUrl, placeholder = R.drawable.image_placeholder)
+            imageViewRedditPost?.loadImage(imageUrl = imageUrl, placeHolder = R.drawable.image_placeholder)
         }
 
         imageViewRedditPost.setOnClickListener {
