@@ -12,11 +12,11 @@ Below are some of the features of this demo library.
 
 # Decisions
 
-While starting this demo i have dome some research on the way how mage loading can be done by keeping in mind about caching mechanism and some of the best apporaches for caching. I landed to some articles 
-and got to knew about DiskLruCache provided by [Jake wharton](https://github.com/JakeWharton). Which is optimised library even most of the methods were matching to AOSP's DiskLruCache.
-Other than that there is defaul LruCache availalbe as a part of Java lang itself which is best optimised Memory caching mechanism which i used in this application.
+While working on this demo i have done some research like how image loading can be done by keeping in mind about caching mechanism and some of the best apporaches for caching. I landed to many articles 
+and got to know about DiskLruCache provided by [Jake wharton](https://github.com/JakeWharton). Which is a very optimised library even most of the methods were matching to AOSP's DiskLruCache.
+Other than that there is defaul LruCache available as a part of Java language itself which is best optimised Memory caching mechanism which i used in this application.
 
-I have to stick to a clean architecture so this demo can be maintainable in future and can be optimised and bugs/issues can be resolved so i stick yo MVVM and followed HILT as 
+I have to stick to a clean architecture so this demo can be maintainable in future and can be optimised and bugs/issues can be resolved so i stick to MVVM and followed HILT as 
 dependency injection library because it is highly compatible with other Jetpack's libraries. Also, it is really easy to maintain and use.
 
 I choose kotlin as primary language for this demo because Kotlin have a lot more features than Java like null safety, extension functions, named parameters etc which enforces code reusability and reduced the number of LOC.
@@ -30,14 +30,14 @@ I choose kotlin as primary language for this demo because Kotlin have a lot more
     val imageLoader = ImageLoader.getInstance(context)
 ```
 
-2. Simply pass imageUrl and a optional placeholder
+2. Simply pass imageUrl, and imageView and an optional placeholder
 ```
     imageLoader.loadImage(fileUrl = url, imageView = imageView, placeholder = placeHolder)
 ```
 
 That's it.
 
-Note: This is a not very well optimised/finished demo app. It containes bugs and UI logs while scrolling.
+Note: This is a not very well optimised/finished demo app. It containes bugs and UI lags while scrolling.
 
 ## Architecture
 This app uses [***MVVM (Model View View-Model)***](https://developer.android.com/jetpack/docs/guide#recommended-app-arch) architecture.
