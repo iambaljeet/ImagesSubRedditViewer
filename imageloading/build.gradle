@@ -2,6 +2,30 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+ext {
+    bintrayRepo = 'ImageLoader'
+    bintrayName = 'com.app.imageloading'
+
+    publishedGroupId = 'com.app.imageloading'
+    libraryName = 'imageloader'
+    artifact = 'imageloader'
+
+    libraryDescription = 'This is an Image Loading Library for Android. It supports Memory and Disk Caching.'
+
+    siteUrl = 'https://github.com/iambaljeet/ImagesSubRedditViewer'
+    gitUrl = 'https://github.com/iambaljeet/ImagesSubRedditViewer.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'iambaljeet'
+    developerName = 'Baljeet Singh'
+    developerEmail = 'ibaljeet@outlook.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
@@ -24,6 +48,10 @@ android {
     }
 }
 
+allprojects {
+    tasks.withType(Javadoc).all { enabled = false }
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -40,3 +68,5 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
 }
+
+apply from: 'publish.gradle'

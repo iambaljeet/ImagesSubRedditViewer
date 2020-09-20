@@ -64,7 +64,7 @@ dependencies {
     kapt "androidx.hilt:hilt-compiler:$hilt_jetpack_version"
 
     //ImageLoader
-    implementation project(path: ':imageloading')
+    implementation 'com.app.imageloading:imageloader:1.0.0'
 
     //Testing
     testImplementation "junit:junit:$junit_version"

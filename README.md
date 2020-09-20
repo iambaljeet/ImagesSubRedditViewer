@@ -23,7 +23,10 @@ I choose kotlin as primary language for this demo because Kotlin have a lot more
 
 # Usage
 
-1. First import the library as a module to your app.
+1. First import the library as a module to your app, or add dependency to `build.gradle` file.
+```
+    implementation 'com.app.imageloading:imageloader:1.0.0'
+```
 
 2. Create an instance of ImageLoader
 ```
